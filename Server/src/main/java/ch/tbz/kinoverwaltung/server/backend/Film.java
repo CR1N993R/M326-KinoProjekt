@@ -1,9 +1,13 @@
 package ch.tbz.kinoverwaltung.server.backend;
 
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Entity
 @Table(name = "films")
 public class Film {
@@ -11,35 +15,17 @@ public class Film {
     @Column(name = "id")
     @GeneratedValue(generator = "incrementor")
     @GenericGenerator(name = "incrementor", strategy = "increment")
+    @Setter(AccessLevel.NONE)
     private long id;
     @Column(name = "name")
+    @NonNull
     private String name;
     @Column(name = "duration")
+    @NonNull
     private int duration;
     @Column(name = "age_raiting")
+    @NonNull
     private String ageRating;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    public String getAgeRating() {
-        return ageRating;
-    }
-
-    public void setAgeRating(String ageRating) {
-        this.ageRating = ageRating;
-    }
+    public Film() {}
 }

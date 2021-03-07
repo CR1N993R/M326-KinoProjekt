@@ -6,7 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="ch.tbz.kinoverwaltung.server" />
+          <factory-entry name="ch.tbz.kinoverwaltung.server" value="d8db7a04-e8f5-47ed-92c8-2890ed12c1c3" />
           <factory-entry name="org.hibernate.tutorial.jpa" value="53a8291e-2112-4fd3-adde-0afe18255f80" />
         </datasource-mapping>
         <naming-strategy-map />

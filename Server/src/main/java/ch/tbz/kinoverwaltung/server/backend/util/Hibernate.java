@@ -1,17 +1,15 @@
 package ch.tbz.kinoverwaltung.server.backend.util;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.List;
-import java.util.Map;
 
 public class Hibernate {
     private static EntityManager manager;
 
-    public static <T> List<T> getAllObjectsFrom(String tableName, Class<T> type){
-        TypedQuery<T> tq = manager.createQuery("SELECT * from " + tableName, type);
+    public static <T> List<T> getAllObjectsFrom(Class<T> type){
+        TypedQuery<T> tq = manager.createQuery("from " + type.getSimpleName(), type);
         return tq.getResultList();
     }
 

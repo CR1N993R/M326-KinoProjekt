@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="org.hibernate.tutorial.jpa/Hibernate" uuid="53a8291e-2112-4fd3-adde-0afe18255f80">
+    <data-source source="LOCAL" name="ch.tbz.kinoverwaltung.server/Hibernate" uuid="d8db7a04-e8f5-47ed-92c8-2890ed12c1c3">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
